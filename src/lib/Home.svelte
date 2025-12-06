@@ -4,7 +4,7 @@
 
 <div class="main" in:fly={{ y: -30, duration: 400 }}>
     <div class="thingy">
-        <h1 class="cat">𓃠</h1>
+        <h1 class="cat">🦌</h1>
         <h1 class="name">xenon.zone</h1>
         <p class="bio">
             i'm a polish teenager living in scotland.<br />VR Enthusiast,
@@ -41,15 +41,24 @@
         margin: auto;
         align-self: center;
         justify-content: center;
+        width: fit-content;
+    }
+    a {
+        font-size: clamp(10px, 3vw, 18px);
+        width: fit-content;
+    }
+    h1 {
+        font-size: clamp(18px, 2.5vw, 48px);
     }
     .cat {
         margin: 0;
         scale: 250%;
+        font-family: "Noto Emoji";
     }
     .bio {
         line-height: normal;
         margin-top: 0;
-        font-size: clamp(14px, 2.5vw, 18px);
+        font-size: clamp(8px, 2.5vw, 18px);
     }
     .name {
         margin-bottom: 0;

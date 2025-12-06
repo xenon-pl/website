@@ -1,7 +1,5 @@
 <script>
     import { fly } from "svelte/transition";
-
-    export let path = "";
 </script>
 
 <div class="contact" in:fly={{ y: -30, duration: 400 }}>

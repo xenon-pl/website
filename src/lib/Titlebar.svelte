@@ -4,7 +4,7 @@
 
 <div class="titlebar" in:fly={{ y: -30, duration: 400 }}>
     <div class="section">
-        <h1 class="cat">𓃠</h1>
+        <h1 class="cat">🦌</h1>
         <div class="spacer"></div>
         <h1 class="name">xenon.zone</h1>
     </div>
@@ -46,9 +46,14 @@
         text-decoration: underline;
         font-size: medium;
         margin-left: 15px;
-        font-size: clamp(14px, 2.5vw, 16px);
+        font-size: clamp(10px, 2.5vw, 16px);
         text-overflow: ellipsis;
         text-wrap: ellipsis;
+    }
+    .cat {
+        font-family: "Noto Emoji";
+        font-size: 1.75em;
+        margin: 0;
     }
     @media (max-width: 600px) {
         .name {
