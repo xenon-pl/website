@@ -1,5 +1,22 @@
-<script>
+<script lang="ts">
     import { fly } from "svelte/transition";
+
+    let player!: HTMLParagraphElement;
+
+    async function updateSong() {
+        const res = await fetch("https://nowplaying.xenon.zone");
+        const data = await res.json();
+
+        if (data.now_playing) {
+            player.textContent = `♫ ${data.track}`;
+            player.title = `♫ ${data.track} by ${data.artist}`;
+        } else {
+            player.textContent = `last played: ${data.track}`;
+        }
+    }
+
+    updateSong();
+    setInterval(updateSong, 30000);
 </script>
 
 <div class="main" in:fly={{ y: -30, duration: 400 }}>
@@ -22,6 +39,7 @@
         <div class="spacer"></div>
         <a href="https://discord.com/users/1147914900086206572"> [Discord] </a>
     </div>
+    <p class="player" bind:this={player}>now playing: [loading]</p>
 </div>
 
 <style>
@@ -65,5 +83,8 @@
     }
     .main {
         z-index: -1;
+    }
+    .player {
+        font-size: small;
     }
 </style>
