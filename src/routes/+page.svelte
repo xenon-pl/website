@@ -63,7 +63,7 @@
       role="button"
       tabindex="0"
       onclick={() => {
-        window.open("https://discord.com/users/1147914900086206572");
+        window.open("https://github.com/xenon-pl");
       }}
     ></i>
   </div>
